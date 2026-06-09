@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuração — MeshCore Brasil</title>
+  <meta name="description" content="Guia completo de configuração do MeshCore para o Brasil: parâmetros de rádio, companion, repetidora e observer.">
+  <link rel="icon" href="../img/logo.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .cfg-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1.25rem 0; }
+    .cfg-table th { background: var(--surface-2); color: var(--text-dim); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.65rem 1rem; text-align: left; border-bottom: 2px solid var(--border); }
+    .cfg-table td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); color: var(--text); }
+    .cfg-table td:first-child { color: var(--text-dim); width: 40%; }
+    .cfg-table td:last-child { color: var(--accent); font-weight: 600; font-family: monospace; font-size: 0.95rem; }
+    .cfg-table tr:last-child td { border-bottom: none; }
+    .anchor-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 3rem; }
+    .anchor-nav a { padding: 0.4rem 0.9rem; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; font-size: 0.8rem; color: var(--text-dim); text-decoration: none; transition: all 0.2s; }
+    .anchor-nav a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+    .config-block { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; margin-bottom: 2rem; }
+    .config-block h2 { font-family: 'Rubik', sans-serif; font-size: 1.3rem; color: var(--white); margin-bottom: 0.4rem; }
+    .config-block .subtitle { color: var(--text-dim); font-size: 0.875rem; margin-bottom: 1.5rem; }
+    .step-inline { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; }
+    .step-num { min-width: 28px; height: 28px; background: var(--accent); color: var(--bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; flex-shrink: 0; margin-top: 2px; }
+    .step-inline p { color: var(--text-dim); font-size: 0.9rem; line-height: 1.6; margin: 0; }
+    .step-inline strong { color: var(--white); }
+    code { background: var(--surface-2); border: 1px solid var(--border); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.85em; color: var(--accent); font-family: monospace; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <img src="../img/logo.png" alt="MeshCore Brasil">
+    <span>MeshCore Brasil</span>
+  </a>
+  <button class="nav-toggle" aria-label="Menu" onclick="this.closest('nav').querySelector('.nav-links').classList.toggle('open')">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="3" y1="6" x2="19" y2="6"/><line x1="3" y1="11" x2="19" y2="11"/><line x1="3" y1="16" x2="19" y2="16"/>
+    </svg>
+  </button>
+  <ul class="nav-links">
+    <li><a href="../index.html">Início</a></li>
+    <li><a href="o-que-e.html">O que é?</a></li>
+    <li><a href="equipamentos.html">Equipamentos</a></li>
+    <li><a href="configuracao.html" class="active">Configuração</a></li>
+    <li><a href="comunidade.html">Comunidade</a></li>
+    <li><a href="ferramentas.html">Ferramentas</a></li>
+    <li><a href="flasher.html">Flasher</a></li>
+    <li><a href="mapa.html">Mapa</a></li>
+    <li><a href="corescope.html">CoreScope</a></li>
+    <li><a href="https://app.meshcore.io/" target="_blank" class="nav-cta">↗ Web App</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <div class="section-label">Guia prático</div>
+    <h1>Configuração para o Brasil</h1>
+    <p>Passo a passo para configurar seu dispositivo MeshCore com os parâmetros adotados pela comunidade brasileira.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+
+    <!-- Anchor nav -->
+    <div class="anchor-nav">
+      <a href="#parametros">Parâmetros de rádio</a>
+      <a href="#companion">Companion (pessoal)</a>
+      <a href="#repetidora">Repetidora</a>
+      <a href="#observer">Observer</a>
+      <a href="#aplicativos">Aplicativos</a>
+    </div>
+
+    <!-- Parâmetros Brasil -->
+    <div id="parametros" class="config-block" style="border-color: var(--accent);">
+      <div style="display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: start; flex-wrap: wrap;">
+        <div>
+          <div class="section-label" style="margin-bottom: 0.5rem;">Padrão nacional</div>
+          <h2>Parâmetros de rádio para o Brasil</h2>
+          <p class="subtitle">Adotados pela comunidade após testes de campo. Compatíveis com a faixa autorizada pela Anatel (Resolução 680/2017).</p>
+          <p style="color: var(--text-dim); font-size: 0.875rem; line-height: 1.7;">A frequência de <strong style="color: var(--white);">923.125 MHz</strong> foi escolhida por apresentar menor interferência de outros dispositivos LoRa que compartilham a faixa ISM brasileira. A largura de banda de <strong style="color: var(--white);">62.5 kHz</strong> proporciona melhor sensibilidade em links longos ou atenuados em comparação com 250 kHz.</p>
+          <div class="info-box" style="margin-top: 1rem;">
+            No app MeshCore, selecione o preset <strong>"Australia: SA, WA / Brazil"</strong> — o Brasil já está incluído oficialmente neste preset.
+          </div>
+        </div>
+        <div class="freq-box" style="min-width: 260px;">
+          <h3>🇧🇷 Preset Brasil</h3>
+          <table class="freq-table">
+            <tr><td>Frequência</td><td>923.125 MHz</td></tr>
+            <tr><td>Bandwidth</td><td>62.5 kHz</td></tr>
+            <tr><td>Spreading Factor</td><td>SF 8</td></tr>
+            <tr><td>Coding Rate</td><td>CR 8</td></tr>
+            <tr><td>Faixa Anatel</td><td>915–928 MHz</td></tr>
+            <tr><td>Potência máx.</td><td>30 dBm (1W)</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Companion -->
+    <div id="companion" class="config-block">
+      <h2>📱 Configurando um Companion (dispositivo pessoal)</h2>
+      <p class="subtitle">O companion é o dispositivo que você carrega. Conecta ao celular via Bluetooth e é sua ponte para a rede mesh.</p>
+
+      <h3 style="color: var(--white); font-size: 1rem; margin-bottom: 1rem;">1. Gravar o firmware (Flashing)</h3>
+      <div class="step-inline">
+        <div class="step-num">1</div>
+        <p>Acesse <a href="https://flasher.meshcore.io/" target="_blank">flasher.meshcore.io</a> usando Chrome, Edge ou outro navegador Chromium. Conecte o dispositivo via USB.</p>
+      </div>
+      <div class="step-inline">
+        <div class="step-num">2</div>
+        <p>Selecione o modelo do seu dispositivo. Você pode digitar o nome do fabricante para filtrar.</p>
+      </div>
+      <div class="step-inline">
+        <div class="step-num">3</div>
+        <p>Escolha o modo <strong>"Companion"</strong> e clique em <strong>Flash</strong>. Se der erro, tente novamente — geralmente funciona na segunda tentativa.</p>
+      </div>
+      <div class="step-inline">
+        <div class="step-num">4</div>
+        <p>Após a gravação, o dispositivo já está pronto para parear com o celular via Bluetooth.</p>
+      </div>
+
+      <hr class="divider" style="margin: 1.5rem 0;">
+
+      <h3 style="color: var(--white); font-size: 1rem; margin-bottom: 1rem;">2. Configurar os parâmetros de rádio</h3>
+      <div class="step-inline">
+        <div class="step-num">1</div>
+        <p>Abra o app MeshCore no celular e conecte ao dispositivo via Bluetooth.</p>
+      </div>
+      <div class="step-inline">
+        <div class="step-num">2</div>
+        <p>Toque no ícone ⚙️ na barra superior para acessar as configurações.</p>
+      </div>
+      <div class="step-inline">
+        <div class="step-num">3</div>
+        <p>Em <strong>Definições de Rádio</strong>, toque em <strong>Escolher Predefinição</strong> e selecione <code>Australia: SA, WA / Brazil</code>.</p>
+      </div>
+      <div class="step-inline">
+        <div class="step-num">4</div>
+        <p>Confirme que os valores estão corretos (tabela acima) e salve clicando em ✔ no canto superior direito.</p>
+      </div>
+
+      <div style="margin-top: 1.25rem;">
+        <table class="cfg-table">
+          <thead><tr><th>Parâmetro</th><th>Valor</th></tr></thead>
+          <tbody>
+            <tr><td>Predefinição</td><td>Australia: SA, WA / Brazil</td></tr>
+            <tr><td>Frequência</td><td>923.125 MHz</td></tr>
+            <tr><td>Largura de Banda</td><td>62.5 kHz</td></tr>
+            <tr><td>Fator de Espalhamento</td><td>8</td></tr>
+            <tr><td>Taxa de Codificação</td><td>8</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Repetidora -->
+    <div id="repetidora" class="config-block">
+      <h2>📡 Configurando uma Repetidora</h2>
+      <p class="subtitle">Repetidoras são a espinha dorsal da rede. Sem elas, o alcance se limita ao raio direto entre dois companions.</p>
+
+      <div class="info-box" style="margin-bottom: 1.5rem;">
+        ⚠️ <strong>Importante:</strong> repetidoras MeshCore <strong>não</strong> são configuradas via Bluetooth. Use sempre a configuração por USB com o <a href="https://config.meshcore.io/" target="_blank">config.meshcore.io</a>.
+      </div>
+
+      <h3 style="color: var(--white); font-size: 1rem; margin-bottom: 1rem;">1. Gravar o firmware</h3>
+      <div class="step-inline">
+        <div class="step-num">1</div>
+        <p>Acesse <a href="https://flasher.meshcore.io/" target="_blank">flasher.meshcore.io</a> com Chrome/Edge. Conecte o dispositivo via USB.</p>
+      </div>
+      <div class="step-inline">
+        <div class="step-num">2</div>
+        <p>Selecione o modelo, escolha o modo <strong>"Repeater"</strong> e clique em <strong>Flash</strong>.</p>
+      </div>
+      <div class="step-inline">
+        <div class="step-num">3</div>
+        <p>Quando solicitado, selecione <strong>"Configure via USB"</strong> para continuar a configuração.</p>
+      </div>
+
+      <hr class="divider" style="margin: 1.5rem 0;">
+
+      <h3 style="color: var(--white); font-size: 1rem; margin-bottom: 1rem;">2. Configuração inicial</h3>
+      <p style="color: var(--text-dim); font-size: 0.875rem; margin-bottom: 1rem;">Acesse <a href="https://config.meshcore.io/" target="_blank">config.meshcore.io</a> com o dispositivo conectado via USB.</p>
+
+      <table class="cfg-table" style="margin-bottom: 1.5rem;">
+        <thead><tr><th>Parâmetro</th><th>Valor recomendado</th></tr></thead>
+        <tbody>
+          <tr><td>Predefinição</td><td>Australia: SA, WA / Brazil</td></tr>
+          <tr><td>Frequência</td><td>923.125 MHz</td></tr>
+          <tr><td>Largura de Banda</td><td>62.5 kHz</td></tr>
+          <tr><td>Fator de Espalhamento</td><td>8</td></tr>
+          <tr><td>Taxa de Codificação</td><td>8</td></tr>
+          <tr><td>Advert Interval</td><td>360 min</td></tr>
+          <tr><td>Flood Advert Interval</td><td>48 horas</td></tr>
+        </tbody>
+      </table>
+
+      <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+        <div class="card">
+          <h3>📍 Nome</h3>
+          <p style="font-size: 0.85rem;">Use um nome que indique a localização — bairro, ruas próximas ou marco relevante. Ajuda outros usuários a entender a cobertura.</p>
+        </div>
+        <div class="card">
+          <h3>🗺️ Localização</h3>
+          <p style="font-size: 0.85rem;">Defina latitude/longitude em formato decimal (ex: <code>-23.50, -47.46</code>). Prefira posição manual a GPS — economiza bateria.</p>
+        </div>
+        <div class="card">
+          <h3>🔑 Senhas</h3>
+          <p style="font-size: 0.85rem;"><strong>Admin:</strong> protege o gerenciamento remoto. <strong>Guest:</strong> se vazio, qualquer usuário vê suas informações de proprietário.</p>
+        </div>
+      </div>
+
+      <div class="info-box" style="margin-top: 1.5rem;">
+        ⚡ <strong>TX Power:</strong> Dispositivos com amplificador externo (Station G2, Heltec V4, RAK 1W) — o firmware não soma o ganho do amp. Verifique a documentação do dispositivo e certifique-se que a potência final não ultrapassa <strong>30 dBm (1W)</strong>.
+      </div>
+    </div>
+
+    <!-- Observer -->
+    <div id="observer" class="config-block">
+      <h2>👁️ Configurando um Observer</h2>
+      <p class="subtitle">O observer escuta o tráfego da rede e envia dados para plataformas como o CoreScope, permitindo visualizar a cobertura da rede em tempo real.</p>
+
+      <p style="color: var(--text-dim); font-size: 0.875rem; line-height: 1.7; margin-bottom: 1rem;">Um observer pode funcionar simultaneamente como repeater ou companion — é uma função adicional que contribui dados à plataforma <a href="https://corescope.meshcore.com.br" target="_blank">CoreScope</a> e ao <a href="https://analyzer.letsmesh.net/" target="_blank">LetsMesh Analyzer</a>.</p>
+
+      <div class="step-inline">
+        <div class="step-num">1</div>
+        <p>No <a href="https://flasher.meshcore.io/" target="_blank">Flasher</a>, selecione o modo <strong>"Observer"</strong> (ou o modo combinado Observer+Repeater).</p>
+      </div>
+      <div class="step-inline">
+        <div class="step-num">2</div>
+        <p>Configure a conexão Wi-Fi para que o observer consiga enviar dados para os servidores da comunidade.</p>
+      </div>
+      <div class="step-inline">
+        <div class="step-num">3</div>
+        <p>Defina os parâmetros de rádio com os mesmos valores do padrão brasileiro (923.125 MHz, BW 62.5, SF8, CR8).</p>
+      </div>
+      <div class="step-inline">
+        <div class="step-num">4</div>
+        <p>Após alguns minutos online, seu observer aparecerá no mapa do <a href="https://corescope.meshcore.com.br" target="_blank">CoreScope</a>.</p>
+      </div>
+
+      <div class="info-box" style="margin-top: 1rem;">
+        💡 Observers precisam de conexão Wi-Fi para enviar dados. Posicione onde haja Wi-Fi disponível — ou use um roteador 4G próximo à repetidora.
+      </div>
+    </div>
+
+    <!-- Aplicativos -->
+    <div id="aplicativos" class="config-block">
+      <h2>📲 Aplicativos disponíveis</h2>
+      <p class="subtitle">Clientes oficiais e alternativos para se conectar à rede MeshCore.</p>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">🤖</div>
+          <h3>MeshCore (Android)</h3>
+          <p>App oficial para Android. Conecta via Bluetooth ao companion e suporta canais, mensagens diretas e gerenciamento remoto de repetidoras.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.liamcottle.meshcore.android" target="_blank" style="display: inline-block; margin-top: 0.75rem; font-size: 0.8rem;">→ Google Play</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">🍎</div>
+          <h3>MeshCore (iOS)</h3>
+          <p>App oficial para iPhone e iPad. Mesmas funcionalidades da versão Android.</p>
+          <a href="https://apps.apple.com/app/meshcore/id6742541282" target="_blank" style="display: inline-block; margin-top: 0.75rem; font-size: 0.8rem;">→ App Store</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌐</div>
+          <h3>meshcore-open (Web)</h3>
+          <p>Cliente open-source baseado em navegador. Boa alternativa para conectar via notebook ou dispositivos sem Bluetooth.</p>
+          <a href="https://github.com/zjs81/meshcore-open" target="_blank" style="display: inline-block; margin-top: 0.75rem; font-size: 0.8rem;">→ GitHub</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">🗺️</div>
+          <h3>CoreScope</h3>
+          <p>Visualizador de nós e cobertura da rede no Brasil. Mostra repetidoras ativas e atividade da mesh por região.</p>
+          <a href="https://corescope.meshcore.com.br" target="_blank" style="display: inline-block; margin-top: 0.75rem; font-size: 0.8rem;">→ corescope.meshcore.com.br</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+      <a href="equipamentos.html" class="btn btn-outline">← Ver equipamentos</a>
+      <a href="comunidade.html" class="btn btn-primary">Entrar na comunidade →</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="../img/logo.png" alt="MeshCore Brasil">
+      <p>Comunidade brasileira dedicada a expandir redes mesh LoRa descentralizadas com o firmware MeshCore.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Começar</h4>
+      <ul>
+        <li><a href="o-que-e.html">O que é MeshCore?</a></li>
+        <li><a href="equipamentos.html">Equipamentos</a></li>
+        <li><a href="configuracao.html">Configuração</a></li>
+        <li><a href="https://flasher.meshcore.io/" target="_blank">Flasher</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Comunidade</h4>
+      <ul>
+        <li><a href="https://t.me/meshcorebrasil" target="_blank">Telegram Brasil</a></li>
+        <li><a href="https://t.me/meshsorocaba" target="_blank">Mesh Sorocaba</a></li>
+        <li><a href="https://meshcore.gg" target="_blank">Discord Global</a></li>
+        <li><a href="comunidade.html">Grupos regionais</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="https://meshcore.com.br" target="_blank">meshcore.com.br</a></li>
+        <li><a href="https://www.meshsorocaba.org" target="_blank">meshsorocaba.org</a></li>
+        <li><a href="https://meshcore.io" target="_blank">meshcore.io (oficial)</a></li>
+        <li><a href="https://github.com/ripplebiz/MeshCore" target="_blank">GitHub MeshCore</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 MeshCore Brasil — Comunidade independente, não afiliada ao projeto MeshCore oficial.</span>
+    <span>Feito com ❤️ pela comunidade 🇧🇷</span>
+  </div>
+</footer>
+
+</body>
+</html>

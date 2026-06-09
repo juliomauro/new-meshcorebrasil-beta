@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeshCore Brasil — Rede mesh LoRa sem internet</title>
+  <meta name="description" content="Comunique-se sem internet, sem celular, sem Starlink. O MeshCore é uma rede de mensagens criptografadas de longo alcance com rádios LoRa.">
+  <link rel="icon" href="img/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MeshCore Brasil">
+  <meta property="og:description" content="Rede mesh LoRa descentralizada e criptografada. Sem internet, sem celular.">
+  <meta property="og:image" content="img/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="img/logo.png" alt="MeshCore Brasil">
+    <span>MeshCore Brasil</span>
+  </a>
+  <button class="nav-toggle" aria-label="Menu" onclick="this.closest('nav').querySelector('.nav-links').classList.toggle('open')">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="3" y1="6" x2="19" y2="6"/><line x1="3" y1="11" x2="19" y2="11"/><line x1="3" y1="16" x2="19" y2="16"/>
+    </svg>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Início</a></li>
+    <li><a href="pages/o-que-e.html">O que é?</a></li>
+    <li><a href="pages/equipamentos.html">Equipamentos</a></li>
+    <li><a href="pages/configuracao.html">Configuração</a></li>
+    <li><a href="pages/comunidade.html">Comunidade</a></li>
+    <li><a href="pages/ferramentas.html">Ferramentas</a></li>
+    <li><a href="pages/flasher.html">Flasher</a></li>
+    <li><a href="pages/mapa.html">Mapa</a></li>
+    <li><a href="pages/corescope.html">CoreScope</a></li>
+    <li><a href="https://app.meshcore.io/" target="_blank" class="nav-cta">↗ Web App</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">🇧🇷 Comunidade Brasileira de MeshCore</div>
+  <h1>Sem sinal. Sem internet.<br><span>Você está preparado?</span></h1>
+  <p>O MeshCore é uma rede de mensagens criptografadas de longo alcance usando rádios LoRa. Funciona sem Wi-Fi, sem celular e sem Starlink — mesmo em emergências.</p>
+  <div class="hero-actions">
+    <a href="pages/o-que-e.html" class="btn btn-primary">Conheça o MeshCore →</a>
+    <a href="pages/equipamentos.html" class="btn btn-outline">Ver equipamentos</a>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- POR QUE MESHCORE -->
+<section>
+  <div class="container">
+    <div class="section-label">Por que usar</div>
+    <h2 class="section-title">Comunicação que funciona quando o resto falha</h2>
+    <p class="section-desc">Uma rede descentralizada onde cada nó retransmite mensagens automaticamente, expandindo o alcance sem depender de infraestrutura central.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">🔒</div>
+        <h3>Criptografado de ponta a ponta</h3>
+        <p>Todas as mensagens são criptografadas. Sua comunicação é privada por padrão, sem depender de servidores externos.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📡</div>
+        <h3>Longo alcance com baixo custo</h3>
+        <p>Rádios LoRa alcançam dezenas de quilômetros com repetidoras simples. Hardware a partir de R$ 300.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌐</div>
+        <h3>Totalmente descentralizado</h3>
+        <p>Sem servidor central, sem empresa controlando. A rede é mantida pela comunidade, para a comunidade.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>Baixo consumo de energia</h3>
+        <p>Repetidoras funcionam com energia solar e bateria pequena. Ideal para locais remotos e situações de emergência.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📱</div>
+        <h3>App para Android e iOS</h3>
+        <p>Conecte seu smartphone via Bluetooth ao rádio e use a rede como um mensageiro comum, sem qualquer dado móvel.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🗺️</div>
+        <h3>Rede já ativa no Brasil</h3>
+        <p>Comunidades em São Paulo, Sorocaba, Campinas, Jundiaí e outras regiões. Veja o mapa de nós ativos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CONFIGURAÇÃO BRASIL -->
+<section style="background: var(--surface);">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: start; flex-wrap: wrap;">
+      <div>
+        <div class="section-label">Configuração para o Brasil</div>
+        <h2 class="section-title">Parâmetros recomendados pela comunidade</h2>
+        <p class="section-desc" style="margin-bottom: 1.5rem;">A Anatel autoriza a faixa de 915–928 MHz para dispositivos LoRa no Brasil (Resolução 680/2017). Após testes em campo, a comunidade adotou os seguintes parâmetros como padrão nacional.</p>
+        <div class="info-box">
+          Esses parâmetros estão disponíveis no preset <strong>Australia: SA, WA / Brazil</strong> do app MeshCore — o Brasil foi adicionado oficialmente ao preset pelo mantenedor do app.
+        </div>
+        <a href="pages/configuracao.html" class="btn btn-outline" style="margin-top: 1.5rem;">Ver guia completo de configuração →</a>
+      </div>
+      <div class="freq-box">
+        <h3>🇧🇷 Preset Brasil</h3>
+        <table class="freq-table">
+          <tr><td>Frequência</td><td>923.125 MHz</td></tr>
+          <tr><td>Bandwidth</td><td>62.5 kHz</td></tr>
+          <tr><td>Spreading Factor</td><td>SF 8</td></tr>
+          <tr><td>Coding Rate</td><td>CR 8</td></tr>
+          <tr><td>Faixa Anatel</td><td>915–928 MHz</td></tr>
+        </table>
+        <p class="freq-note">Frequência escolhida por menor interferência de outros dispositivos LoRa que dividem a faixa ISM no Brasil.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- COMO COMEÇAR -->
+<section>
+  <div class="container">
+    <div class="section-label">Primeiros passos</div>
+    <h2 class="section-title">Como entrar na rede</h2>
+    <p class="section-desc">Em poucos passos você já consegue se comunicar com outros nós da rede brasileira.</p>
+    <div class="steps">
+      <div class="step">
+        <h3>Escolha um rádio</h3>
+        <p>Selecione um dispositivo compatível com LoRa 915 MHz. O Heltec V3 é a opção mais acessível para começar.</p>
+      </div>
+      <div class="step">
+        <h3>Instale o firmware</h3>
+        <p>Use o MeshCore Flasher diretamente pelo navegador, sem precisar instalar nenhum software.</p>
+      </div>
+      <div class="step">
+        <h3>Configure os parâmetros</h3>
+        <p>Ajuste a frequência para 923.125 MHz, BW 62.5, SF 8, CR 8 — o padrão da comunidade brasileira.</p>
+      </div>
+      <div class="step">
+        <h3>Conecte o app</h3>
+        <p>Baixe o app MeshCore no seu smartphone, conecte via Bluetooth e comece a se comunicar.</p>
+      </div>
+    </div>
+    <div style="margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+      <a href="pages/equipamentos.html" class="btn btn-outline">Ver equipamentos recomendados</a>
+      <a href="https://flasher.meshcore.io/" target="_blank" class="btn btn-primary">⚡ Abrir Flasher</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- COMUNIDADE -->
+<section style="background: var(--surface);">
+  <div class="container">
+    <div class="section-label">Comunidade</div>
+    <h2 class="section-title">Faça parte da rede</h2>
+    <p class="section-desc">Participe dos grupos, tire dúvidas, compartilhe sua experiência e ajude a expandir a rede mesh no Brasil.</p>
+    <div class="community-links">
+      <a href="https://t.me/meshcorebrasil" target="_blank" class="community-link">
+        <span class="icon">✈️</span>
+        <div>
+          <div style="font-weight: 600; color: var(--white);">Telegram MeshCore Brasil</div>
+          <div style="font-size: 0.8rem; color: var(--text-dim);">@meshcorebrasil</div>
+        </div>
+      </a>
+      <a href="https://t.me/meshsorocaba" target="_blank" class="community-link">
+        <span class="icon">✈️</span>
+        <div>
+          <div style="font-weight: 600; color: var(--white);">Telegram Mesh Sorocaba</div>
+          <div style="font-size: 0.8rem; color: var(--text-dim);">@meshsorocaba</div>
+        </div>
+      </a>
+      <a href="https://meshcore.gg" target="_blank" class="community-link">
+        <span class="icon">💬</span>
+        <div>
+          <div style="font-weight: 600; color: var(--white);">Discord MeshCore Global</div>
+          <div style="font-size: 0.8rem; color: var(--text-dim);">meshcore.gg</div>
+        </div>
+      </a>
+      <a href="pages/comunidade.html" class="community-link">
+        <span class="icon">🗺️</span>
+        <div>
+          <div style="font-weight: 600; color: var(--white);">Ver todos os grupos regionais</div>
+          <div style="font-size: 0.8rem; color: var(--text-dim);">Grupos por estado e cidade</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="img/logo.png" alt="MeshCore Brasil">
+      <p>Comunidade brasileira dedicada a expandir redes mesh LoRa descentralizadas com o firmware MeshCore.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Começar</h4>
+      <ul>
+        <li><a href="pages/o-que-e.html">O que é MeshCore?</a></li>
+        <li><a href="pages/equipamentos.html">Equipamentos</a></li>
+        <li><a href="pages/configuracao.html">Configuração</a></li>
+        <li><a href="https://flasher.meshcore.io/" target="_blank">Flasher</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Comunidade</h4>
+      <ul>
+        <li><a href="https://t.me/meshcorebrasil" target="_blank">Telegram Brasil</a></li>
+        <li><a href="https://t.me/meshsorocaba" target="_blank">Mesh Sorocaba</a></li>
+        <li><a href="https://meshcore.gg" target="_blank">Discord Global</a></li>
+        <li><a href="pages/comunidade.html">Grupos regionais</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="https://meshcore.com.br" target="_blank">meshcore.com.br</a></li>
+        <li><a href="https://www.meshsorocaba.org" target="_blank">meshsorocaba.org</a></li>
+        <li><a href="https://meshcore.io" target="_blank">meshcore.io (oficial)</a></li>
+        <li><a href="https://github.com/ripplebiz/MeshCore" target="_blank">GitHub MeshCore</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 MeshCore Brasil — Comunidade independente, não afiliada ao projeto MeshCore oficial.</span>
+    <span>Feito com ❤️ pela comunidade 🇧🇷</span>
+  </div>
+</footer>
+
+</body>
+</html>

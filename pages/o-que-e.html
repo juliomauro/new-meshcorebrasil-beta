@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O que é MeshCore? — MeshCore Brasil</title>
+  <meta name="description" content="Entenda o que é o MeshCore, como funciona uma rede mesh LoRa e por que ela é a solução ideal para comunicação sem internet no Brasil.">
+  <link rel="icon" href="../img/logo.png">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <img src="../img/logo.png" alt="MeshCore Brasil">
+    <span>MeshCore Brasil</span>
+  </a>
+  <button class="nav-toggle" aria-label="Menu" onclick="this.closest('nav').querySelector('.nav-links').classList.toggle('open')">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="3" y1="6" x2="19" y2="6"/><line x1="3" y1="11" x2="19" y2="11"/><line x1="3" y1="16" x2="19" y2="16"/>
+    </svg>
+  </button>
+  <ul class="nav-links">
+    <li><a href="../index.html">Início</a></li>
+    <li><a href="o-que-e.html" class="active">O que é?</a></li>
+    <li><a href="equipamentos.html">Equipamentos</a></li>
+    <li><a href="configuracao.html">Configuração</a></li>
+    <li><a href="comunidade.html">Comunidade</a></li>
+    <li><a href="ferramentas.html">Ferramentas</a></li>
+    <li><a href="flasher.html">Flasher</a></li>
+    <li><a href="mapa.html">Mapa</a></li>
+    <li><a href="corescope.html">CoreScope</a></li>
+    <li><a href="https://app.meshcore.io/" target="_blank" class="nav-cta">↗ Web App</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <div class="section-label">Conceitos básicos</div>
+    <h1>O que é o MeshCore?</h1>
+    <p>Uma rede de comunicação descentralizada que funciona sem internet, sem celular e sem infraestrutura central — usando rádios LoRa de baixo custo.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+
+    <!-- O que é -->
+    <div style="max-width: 780px; margin-bottom: 3rem;">
+      <h2 class="section-title">A rede que você controla</h2>
+      <p style="color: var(--text-dim); margin-bottom: 1rem; line-height: 1.8;">O MeshCore permite o envio e recebimento de mensagens de texto usando pequenos transmissores de rádio conectados ao celular ou notebook. Isso é possível graças a uma <strong style="color: var(--white);">topologia mesh (malha)</strong>.</p>
+      <p style="color: var(--text-dim); margin-bottom: 1rem; line-height: 1.8;">Em uma rede mesh, cada dispositivo é responsável por retransmitir as mensagens que ouve até que elas cheguem ao destinatário. A rede não depende de uma autoridade ou servidor central — como acontece com o WhatsApp ou o SMS. <strong style="color: var(--white);">Os usuários são os donos da própria infraestrutura.</strong></p>
+      <p style="color: var(--text-dim); line-height: 1.8;">Redes mesh podem servir para mensagens do dia a dia, comunicação de emergência ou qualquer outro fim que utilize mensagens de texto.</p>
+    </div>
+
+    <!-- Casos de uso -->
+    <div class="cards" style="margin-bottom: 3rem;">
+      <div class="card">
+        <div class="card-icon">🆘</div>
+        <h3>Emergências e desastres</h3>
+        <p>Quando torres de celular caem ou a internet falha, a rede mesh continua funcionando. Já usada em simulados da Defesa Civil no Brasil.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏕️</div>
+        <h3>Áreas remotas</h3>
+        <p>Trilhas, expedições, fazendas, offshore. Onde não há sinal, o MeshCore garante comunicação segura com alcance de dezenas de km.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏙️</div>
+        <h3>Rede urbana comunitária</h3>
+        <p>Comunidades em Sorocaba, São Paulo, Campinas e outras cidades já mantêm redes ativas cobrindo grandes áreas urbanas.</p>
+      </div>
+    </div>
+
+    <hr class="divider" style="margin: 3rem 0;">
+
+    <!-- Como funciona -->
+    <div style="margin-bottom: 3rem;">
+      <div class="section-label">Arquitetura</div>
+      <h2 class="section-title" style="margin-bottom: 1.5rem;">Como a rede funciona</h2>
+
+      <div class="cards" style="margin-bottom: 2rem;">
+        <div class="card">
+          <div class="card-icon">📱</div>
+          <h3>Companion (Dispositivo pessoal)</h3>
+          <p>O rádio que você carrega. Conecta ao seu celular via Bluetooth e é sua ponte para a rede mesh. Ideal para uso diário e mensagens pessoais.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📡</div>
+          <h3>Repeater (Repetidora)</h3>
+          <p>Dispositivo fixo instalado em local alto — telhado, poste, morro. Retransmite mensagens automaticamente, expandindo o alcance da rede por vários km.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">👁️</div>
+          <h3>Observer (Observador)</h3>
+          <p>Escuta o tráfego da rede e envia dados para plataformas como o CoreScope, permitindo visualizar a cobertura e saúde da rede.</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <strong>Caminho de uma mensagem:</strong> Telefone A → Companion 1 (Bluetooth) → sinal LoRa → Repetidora 1 → Repetidora 2 → Companion 2 (Bluetooth) → Telefone B. Cada repetidora estende o alcance sem necessidade de internet em nenhuma etapa.
+      </div>
+    </div>
+
+    <hr class="divider" style="margin: 3rem 0;">
+
+    <!-- Material necessário -->
+    <div style="margin-bottom: 3rem;">
+      <div class="section-label">Material</div>
+      <h2 class="section-title" style="margin-bottom: 1.5rem;">O que você precisa para começar</h2>
+      <div class="steps">
+        <div class="step">
+          <h3>Dispositivo LoRa 915 MHz</h3>
+          <p>Um rádio compatível com MeshCore. O Heltec V3 é a opção mais acessível (a partir de ~R$ 300).</p>
+        </div>
+        <div class="step">
+          <h3>Antena 915–928 MHz</h3>
+          <p>Antena ajustada para a faixa de 33 cm. Muitos dispositivos já vêm com uma antena básica incluída.</p>
+        </div>
+        <div class="step">
+          <h3>Fonte de energia</h3>
+          <p>USB, bateria interna, banco de energia ou painel solar para repetidoras fixas.</p>
+        </div>
+        <div class="step">
+          <h3>App MeshCore</h3>
+          <p>Disponível para Android e iOS. Ou use o cliente web para conectar via navegador.</p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider" style="margin: 3rem 0;">
+
+    <!-- Pontos importantes -->
+    <div style="margin-bottom: 3rem;">
+      <div class="section-label">Características</div>
+      <h2 class="section-title" style="margin-bottom: 1.5rem;">O que saber antes de começar</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">📏</div>
+          <h3>Alcance</h3>
+          <p>Vários quilômetros em linha de visada. Em área urbana o alcance é menor, mas a rede se beneficia de múltiplos nós e repetidoras.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔒</div>
+          <h3>Privacidade</h3>
+          <p>Mensagens criptografadas. Somente o destinatário (pessoa ou canal) consegue ler o conteúdo. Sem metadados em servidores externos.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔋</div>
+          <h3>Consumo de energia</h3>
+          <p>Dispositivos consomem pouca energia. Dependendo do modelo e uso, funcionam por dias ou semanas com uma única carga.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">💰</div>
+          <h3>Custo</h3>
+          <p>Sem mensalidade, sem contrato. Você compra o dispositivo uma vez e usa à vontade. Hardware a partir de ~R$ 300.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+      <a href="equipamentos.html" class="btn btn-primary">Ver equipamentos recomendados →</a>
+      <a href="configuracao.html" class="btn btn-outline">Guia de configuração</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background: var(--surface);">
+  <div class="container">
+    <div class="section-label">Dúvidas frequentes</div>
+    <h2 class="section-title" style="margin-bottom: 2rem;">Perguntas frequentes</h2>
+
+    <div style="display: grid; gap: 1rem; max-width: 780px;">
+
+      <div class="card">
+        <h3>Qual a diferença entre MeshCore e Meshtastic?</h3>
+        <p style="margin-top: 0.5rem;">Ambos usam rádios LoRa, mas com protocolos diferentes. O Meshtastic é mais indicado para pequenos grupos móveis. O MeshCore é otimizado para redes estacionárias de longo alcance que cobrem várias cidades — por isso é o protocolo oficial da Mesh Sorocaba e da comunidade brasileira.</p>
+      </div>
+
+      <div class="card">
+        <h3>Preciso de licença de radioamador?</h3>
+        <p style="margin-top: 0.5rem;">Não. Os rádios LoRa operam na faixa ISM de 915–928 MHz, autorizada pela Anatel para dispositivos de radiação restrita com até 1W (Resolução 680/2017), sem exigência de licença.</p>
+      </div>
+
+      <div class="card">
+        <h3>Como adicionar um contato?</h3>
+        <p style="margin-top: 0.5rem;">Existem três formas: descoberta automática (quando o outro nó transmite na rede), escaneamento de QR Code, ou anúncios mútuos. Somente contatos adicionados à sua lista permitem mensagens diretas.</p>
+      </div>
+
+      <div class="card">
+        <h3>Por que consigo falar no canal público mas não em privado?</h3>
+        <p style="margin-top: 0.5rem;">Canais públicos usam flood routing (mensagem para todos). Mensagens diretas precisam de rotas específicas, que são descobertas na primeira troca. Adicione a pessoa à sua lista de contatos antes de tentar mensagens diretas.</p>
+      </div>
+
+      <div class="card">
+        <h3>Como acompanhar o caminho das mensagens?</h3>
+        <p style="margin-top: 0.5rem;">Quando o destinatário recebe sua mensagem, ele envia um relatório de entrega com o caminho percorrido. Você também pode usar o <a href="https://analyzer.letsmesh.net/" target="_blank">LetsMesh Analyzer</a> para analisar pacotes da rede.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="../img/logo.png" alt="MeshCore Brasil">
+      <p>Comunidade brasileira dedicada a expandir redes mesh LoRa descentralizadas com o firmware MeshCore.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Começar</h4>
+      <ul>
+        <li><a href="o-que-e.html">O que é MeshCore?</a></li>
+        <li><a href="equipamentos.html">Equipamentos</a></li>
+        <li><a href="configuracao.html">Configuração</a></li>
+        <li><a href="https://flasher.meshcore.io/" target="_blank">Flasher</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Comunidade</h4>
+      <ul>
+        <li><a href="https://t.me/meshcorebrasil" target="_blank">Telegram Brasil</a></li>
+        <li><a href="https://t.me/meshsorocaba" target="_blank">Mesh Sorocaba</a></li>
+        <li><a href="https://meshcore.gg" target="_blank">Discord Global</a></li>
+        <li><a href="comunidade.html">Grupos regionais</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="https://meshcore.com.br" target="_blank">meshcore.com.br</a></li>
+        <li><a href="https://www.meshsorocaba.org" target="_blank">meshsorocaba.org</a></li>
+        <li><a href="https://meshcore.io" target="_blank">meshcore.io (oficial)</a></li>
+        <li><a href="https://github.com/ripplebiz/MeshCore" target="_blank">GitHub MeshCore</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 MeshCore Brasil — Comunidade independente, não afiliada ao projeto MeshCore oficial.</span>
+    <span>Feito com ❤️ pela comunidade 🇧🇷</span>
+  </div>
+</footer>
+
+</body>
+</html>
