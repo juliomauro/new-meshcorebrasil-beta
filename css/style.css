@@ -529,6 +529,13 @@ footer {
 
 /* ── RESPONSIVE ────────────────────────────────────────────────────────────── */
 
+.params-grid { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: start; }
+
+@media (max-width: 700px) {
+  .params-grid { grid-template-columns: 1fr; }
+  .params-grid .freq-box { min-width: unset; width: 100%; }
+}
+
 @media (max-width: 768px) {
   nav { padding: 0 1.25rem; }
 

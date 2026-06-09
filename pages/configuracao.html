@@ -25,6 +25,11 @@
     .step-inline p { color: var(--text-dim); font-size: 0.9rem; line-height: 1.6; margin: 0; }
     .step-inline strong { color: var(--white); }
     code { background: var(--surface-2); border: 1px solid var(--border); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.85em; color: var(--accent); font-family: monospace; }
+    .params-grid { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: start; }
+    @media (max-width: 700px) {
+      .params-grid { grid-template-columns: 1fr; }
+      .params-grid .freq-box { min-width: unset; width: 100%; }
+    }
   </style>
 </head>
 <body>
@@ -75,7 +80,7 @@
 
     <!-- Parâmetros Brasil -->
     <div id="parametros" class="config-block" style="border-color: var(--accent);">
-      <div style="display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: start; flex-wrap: wrap;">
+      <div class="params-grid">
         <div>
           <div class="section-label" style="margin-bottom: 0.5rem;">Padrão nacional</div>
           <h2>Parâmetros de rádio para o Brasil</h2>
