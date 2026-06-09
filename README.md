@@ -1,6 +1,8 @@
-# MeshCore Brasil — novo site
+# MeshCore Brasil — site de teste (proof of concept)
 
-Site da comunidade brasileira de MeshCore, construído como uma mescla de três fontes de conteúdo existentes em um único lugar de referência.
+> ⚠️ Este repositório é um site de teste para validação de conceito. Não representa o site oficial da comunidade.
+
+Site experimental da comunidade brasileira de MeshCore, construído como uma mescla de três fontes de conteúdo existentes em um único lugar de referência.
 
 ## A ideia
 
